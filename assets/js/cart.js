@@ -112,3 +112,37 @@ function sendEmail() {
   loadCart();
   $('.send-cart').on('click', sendEmail);
 });
+
+function sendEmail() {
+	var cname = $('#cname').val();
+	var cemail = $('#cemail').val();
+	var cphone = $('#cphone').val();
+	if (cname!='' && cphone!='') {
+		if (isEmpty(cart)) {
+		$.post(
+			"../dist/assets/core/mail.php",
+			{
+				"cname" : cname,
+				"cemail" : cemail,
+				"cphone" : cphone,
+				"cart" : cart
+			},
+			function(data){
+				if (data==1){
+				alert('Заказ отправлен!');
+
+			}
+			else {
+				alert('Повторите заказ!');
+			 }
+			}
+		  );
+		}
+		else {
+		alert('Корзина пуста!');
+		}
+	}
+	else {
+		alert('Заполните поля!');
+	}
+}
