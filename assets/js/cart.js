@@ -12,7 +12,7 @@ function loadCart() {
 
 function showCart() {
 	if (!isEmpty(cart)) {
-        	$('.main-cart').html('<p class="cart-empty">Корзина пуста!</p>');
+        	$('.main-cart').html('<p class="cart-empty">Корзина пуста..</p>');
         }
         else {
 	$.getJSON('assets/js/goods.json', function (data) {
@@ -26,7 +26,7 @@ function showCart() {
 			out += ' <button data-id="'+id+'" class="minus-goods">-</button>';
 			out += ' '+cart[id]+'шт.';
 			out += ' <button data-id="'+id+'" class="plus-goods">+</button>';
-			out += ' '+cart[id]+''*''+goods[id].cost+''+'руб.';
+			out += 	 cart[id]*goods[id].cost+'руб.';
 			out += ' </div>';
 			out += ' <br>';
 		}
@@ -68,6 +68,7 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+
 function isEmpty(object) {
 	for (var key in object)
 	if (object.hasOwnProperty(key)) return true;
@@ -89,8 +90,14 @@ function sendEmail() {
 				"cart" : cart
 			},
 			function(data){
-				console.log(data);
+				if (data==1){
+				alert('Заказ отправлен!');
+
+			}
+			else {
+				alert('Повторите заказ!');
 			 }
+			}
 		  );
 		}
 		else {

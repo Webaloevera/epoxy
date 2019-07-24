@@ -60,7 +60,7 @@ function goodsOut(data) {
       out +='<div class="cost">'+data[key].cost+' руб.</div>';
       out +='</div>';
       out +='<a class="blue-btn" href="">Смотреть</a>';
-      out +='<button class="add__card" data-id="'+[key]+'">Купить</button>';
+      out +='<button class="add__card" data-toggle-text="Товар в корзине" data-id="'+[key]+'">Купить</button>';
       out +='</div>';
   }
   $('.product__cards').html(out);
@@ -77,6 +77,7 @@ function addToCart() {
   }
   showMiniCart();
   saveCart();
+
 }
 
 function saveCart() {
@@ -86,7 +87,7 @@ function saveCart() {
 function showMiniCart() {
     var out="";
     for (var key in cart) {
-        out += cart[key];
+         out++;
     }
     $('.mini-cart').html(out);
 }
