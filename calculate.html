@@ -5,7 +5,11 @@ title: price
 
 <header>
 	<!-- Preloader -->
-	<div class="preloader"><p>Загрузка...</p></div>
+	<div class="preloader"><div class="LoaderBalls">
+	<div class="LoaderBalls__item"></div>
+	<div class="LoaderBalls__item"></div>
+	<div class="LoaderBalls__item"></div>
+</div></div>
 		<div class="new__header-bcg"> 
 				<div class="new__header">
 					<div class="header-container">
@@ -33,13 +37,27 @@ title: price
 	</div>
 </header>
 <main>
-	<div class="uCalc_214705"></div><script> 
-	var widgetOptions214705 = { bg_color: "transparent" };
-	 (function() { 
-	 var a = document.createElement("script"), h = "head";
-	  a.async = true;
-	   a.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//ucalc.pro/api/widget.js?id=214705&t="+Math.floor(new Date()/18e5); document.getElementsByTagName(h)[0].appendChild(a) })();
-	</script>
+	<div class="price">
+  <div class="title">Рассчет стоимости потолка</div>
+    <div id="calculator" class="calculator">
+        <div class="required">
+<input name="area" type="text" value="10">
+        </div>
+        <div class="required">
+                <select name="texture">
+                    <option value="mat">Матовый</option>
+                    <option value="glossy">Глянцевый</option>
+                    <option value="satin">Сатиновый</option>
+                    <option value="fabric">Тканевый</option>
+                </select>
+            </div>
+        <input name="corners" type="text" value="4"><input name="chandelier-hook" type="text" value=""><input name="lamp" type="text" value=""><input name="tube" type="text" value="">
+    <div class="total">
+    Примерная стоимость: <span class="total">2990 руб.</span>
+    </div>
+    </div>
+</div>
+
 </main>
 <footer>
 	<svg xmlns="http://www.w3.org/2000/svg" class="svg--triangle-footer" viewBox="0 0 100 100" preserveAspectRatio="none">
