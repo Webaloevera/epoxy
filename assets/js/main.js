@@ -104,3 +104,6 @@ $(document).ready(function () {
   loadCart();
 });
 
+$(window).on('load', function () {
+$('.preloader').fadeOut();
+});
