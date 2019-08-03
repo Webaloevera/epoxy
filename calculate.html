@@ -24,7 +24,6 @@ title: price
 							<li><a href="price.html">Товары</a></li>
 							<li><a href="calculate.html" class="active-menu">Расчитать цену</a></li>
 							<li><a href="contacts.html">Контакты</a></li>
-							<li><a href="">О нас</a></li>
 						</ul>
 					</nav>
 					<a href="cart.html" class="shopping-cart__logo">
@@ -37,27 +36,44 @@ title: price
 	</div>
 </header>
 <main>
-	<div class="price">
-  <div class="title">Рассчет стоимости потолка</div>
-    <div id="calculator" class="calculator">
-        <div class="required">
-<input name="area" type="text" value="10">
-        </div>
-        <div class="required">
-                <select name="texture">
-                    <option value="mat">Матовый</option>
-                    <option value="glossy">Глянцевый</option>
-                    <option value="satin">Сатиновый</option>
-                    <option value="fabric">Тканевый</option>
-                </select>
-            </div>
-        <input name="corners" type="text" value="4"><input name="chandelier-hook" type="text" value=""><input name="lamp" type="text" value=""><input name="tube" type="text" value="">
-    <div class="total">
-    Примерная стоимость: <span class="total">2990 руб.</span>
-    </div>
-    </div>
-</div>
-
+<section class="calculate">
+		<button class="snip0050 red"><span>Add to Cart</span><i class="ion-ios-cart"></i></button>
+	<div class="wrapper">
+					<div class="title-center">Расчитать приблизительную цену</div>
+		<div class="calc__price">
+			<div class="calc__price_items">
+				<div class="calc__price_item">
+					<input id="width" type="text" placeholder="Ширина стола"/>
+					<p>мм.</p>
+				</div>
+				<div class="calc__price_item">
+					<input id="height" type="text" placeholder="Высота стола"/>
+					<p>мм.</p>
+				</div>
+			</div>
+			<div class="calc__price_item btn-result">
+				<div class="calc__price_item-result">
+				<p>Приблизительная цена ~</p>
+				<div id="area">0</div><p>руб.</p>
+			</div>
+				<button class="btn-lg btn-outline-primary" id="submit" type="submit" form="getSize" value="Calculate!" onclick="updateSize()">Рассчитать</button>
+			</div>
+		</div>
+		<div class="about__us-info">
+				<div class="about__info-item">
+					<h1>Создадим макет стола вместе!</h1>
+					<p>Основное в нашем деле, это найти идиллию понимая того, как должен выглядеть Ваш будущий стол! 
+Создавание дизайна дело не из простых, но вместе,мы создадим макет в считанные минуты. 
+При этом, вам даже не обязательно выходить из дома. <br> Дизайн подходящий для Вас, мы можем создать в удаленном режиме! 
+С помощью Photoshop-а, наша команда создаст макет любой сложности и воплотит её в жизнь! Учтём все Ваши пожелания и предпочтения по материалу, вплоть до самореза. 
+Существует более сотни коллабораций разных материалов и мы подберем вместе то, что подходит именно для Вас!</p>
+				</div>
+					<div class="about__info-item">
+					<img class="box-shadow-r" src="assets/img/about_us_1.jpg" alt="">
+				</div>
+			</div>
+	</div>
+</section>    
 </main>
 <footer>
 	<svg xmlns="http://www.w3.org/2000/svg" class="svg--triangle-footer" viewBox="0 0 100 100" preserveAspectRatio="none">

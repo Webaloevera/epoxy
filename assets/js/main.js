@@ -117,3 +117,29 @@ function change() {
 $('.add__card').on('click');
 $(this).toggleClass('active');
 };
+
+
+
+// Add block about
+$('.about__add-btn').html('Подробнее');
+
+$('.about__add-btn').on('click', function(e){
+  e.preventDefault();
+  
+  var
+    $this = $(this),
+    content = $('.about__add');  
+  
+  
+  if(!$this.hasClass('trigger')){
+    $this.addClass('trigger');
+    $this.html('Обратно');
+    
+    content.slideDown();
+  } else {
+    $this.removeClass('trigger');
+    $this.html('Подробнее');
+    
+    content.slideUp();
+  }
+});
