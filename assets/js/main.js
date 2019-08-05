@@ -60,13 +60,21 @@ function goodsOut(data) {
       out +='<p>Цена:</p>';
       out +='<div class="cost">'+data[key].cost+' руб.</div>';
       out +='</div>';
-      out +='<a class="blue-btn" href="">Смотреть</a>';
-      out +='<button class="add__card" data-toggle-text="Товар в корзине" data-id="'+[key]+'">Купить</button>';
+      out +='<div class="product__card-btn">';
+      out +='<a class="add__card" href="">';
+      out +='<span>Смотреть</span>';
+      out +='<i class="ion-checkmark"></i>';
+      out +='</a>';
+      out +='<button class="add__card add__card-btn" data-toggle-text="Товар в корзине" data-id="'+[key]+'">';
+      out +='<span>В корзину</span>';
+      out +='<i class="ion-ios-cart"></i>';
+      out +='</button>';
+      out +='</div>';
       out +='</div>';
   }
   $('.product__cards').html(out);
-  $('.add__card').on('click', addToCart);
-  $('.add__card').on('click', change);
+  $('.add__card-btn').on('click', addToCart);
+  $('.add__card-btn').on('click', change);
 }
 
 function addToCart() {
@@ -114,8 +122,8 @@ $('.preloader').fadeOut();
 });
 
 function change() {
-$('.add__card').on('click');
-$(this).toggleClass('active');
+$('.add__card-btn').on('click');
+$(this).addClass('active');
 };
 
 

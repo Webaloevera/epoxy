@@ -12,7 +12,7 @@ function updateSize(){
   // Creating a function to do the calculation and returning an array of the results
 
   function getSize(width, height, depth) {
-    var area = width * 44 - height;
+    var area = width * 47 - height;
     var volume = width * height;
     var sizes = [area, volume];
     return sizes;
