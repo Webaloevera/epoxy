@@ -82,5 +82,33 @@
 		"desctiproin" : "Самый галимый",
 		"order" : "1",
 		"img" : "Cart-11.jpg"
+	},
+	"1246" : {
+		"name" : "Стол-12",
+		"cost" : "11000",
+		"desctiproin" : "Самый галимый",
+		"order" : "1",
+		"img" : "Cart-12.jpg"
+	},
+	"1247" : {
+		"name" : "Стол-13",
+		"cost" : "43000",
+		"desctiproin" : "Самый галимый",
+		"order" : "1",
+		"img" : "Cart-13.jpg"
+	},
+	"1248" : {
+		"name" : "Стол-14",
+		"cost" : "7000",
+		"desctiproin" : "Самый галимый",
+		"order" : "1",
+		"img" : "Cart-14.jpg"
+	},
+	"1249" : {
+		"name" : "Стол-15",
+		"cost" : "434000",
+		"desctiproin" : "Самый галимый",
+		"order" : "1",
+		"img" : "Cart-15.jpg"
 	}
 }

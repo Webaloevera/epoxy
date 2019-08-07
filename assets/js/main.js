@@ -9,13 +9,12 @@ $(document).ready(function() {
         autoplaySpeed:2800,     
         slidesToShow:3,     
         slidesToScroll:1,   
-        dots:true,
-
+        dots:true
     });
 
 $('.product__slider').slick({
   centerMode: true,
-
+centerPadding: '20px',
   slidesToShow: 3,
    autoplay: true,
   autoplaySpeed: 2000,
@@ -23,6 +22,7 @@ $('.product__slider').slick({
     {
       breakpoint: 768,
       settings: {
+        centerPadding: '20px',
         arrows: false,
         centerMode: true,
         slidesToShow: 3
@@ -32,6 +32,7 @@ $('.product__slider').slick({
       breakpoint: 480,
       settings: {
         arrows: false,
+        centerPadding: '20px',
         centerMode: true,
         slidesToShow: 1
       }
@@ -87,7 +88,6 @@ function addToCart() {
   }
   showMiniCart();
   saveCart();
-
 }
 
 function saveCart() {
@@ -125,7 +125,6 @@ function change() {
 $('.add__card-btn').on('click');
 $(this).addClass('active');
 };
-
 
 
 // Add block about
