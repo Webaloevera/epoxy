@@ -53,8 +53,9 @@ body {
     transition: all .3s;
 }
 
-img {
-	max-width: 100%;
+img, iframe {
+  max-width: 100%;
+  width: 100%;
 }
 
 a {
@@ -65,6 +66,10 @@ h1, h2, h3, h4, hr, nav, p, ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+main {
+	background: #F5F5F5;
 }
 
 // Preloader
@@ -125,9 +130,17 @@ z-index: 9999999;
 
 .title-center {
 	text-align: center;
-	font-size: 1.8vh;
+	font-size: 1.3vh;
 	padding: 1em 0em;
+}
 
+.title {
+	font-family: $ff-l;
+	font-size: 1.9em;
+}
+
+.logo {
+	width: 60px;
 }
 
 .header-container {
@@ -141,7 +154,7 @@ z-index: 9999999;
 }
 
 .header__top {
-	padding: 1em 1em;
+	padding: .5em .5em;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -220,12 +233,16 @@ a.active-menu {
 
 .mini-cart  {
 	position: absolute;
-	top: 4px;
-	margin: 0 auto;
-	right:15px;
+	display: block;
+	top: -2px;
+	left: 35px;
 	font-weight: bold;
-	color: #fff;
-	font-size: 1.2em;
+	color: #000;
+	background: #fff;
+	border-radius: 50%;
+	width: 20px;
+	text-align: center;
+	font-size: .9em;
 }
 
 /* About */
@@ -388,7 +405,6 @@ section.about__us {
 }
 
 .call-back__item:first-child {
-	width: 40%;
 	min-width: 320px;
 	border-top: 3px solid #007191;
 	box-shadow: 0px 0px 19px 9px rgba(230,218,230,1);
@@ -458,7 +474,7 @@ section.about__us {
 }
 
 .call-back__text h1 {
-	font-size: 2.3em;
+	font-size: 1.8em;
 	font-family: $ff-r;
 }
 
@@ -625,7 +641,8 @@ footer {
 }
 
 .product > .title-center {
-	padding: 4vh;
+	padding: 2vh 0vh;
+	font-size: 1.3em;
 }
 
 .product__slider {
@@ -637,7 +654,8 @@ footer {
 	text-align: center;
 	width: 300px;
 	margin: 0 auto;
-
+	box-shadow: 0px 0px 15px 3px rgba(122,122,122,0.27);
+	border-bottom: 5px solid #007191;
 }
 
 .product__cards {
@@ -654,7 +672,7 @@ footer {
 	min-width: 285px;
 	padding: 1vh;
 	align-self: baseline;
-	margin:  5% 0% auto;
+	margin:  3% 0% auto;
 	font-family: $ff-r;
 }
 
@@ -665,6 +683,21 @@ footer {
 .product__card img {
 	width: 100%;
 	height: 230px;
+	box-shadow: 0px 0px 15px 3px rgba(122,122,122,0.27);
+	border-bottom: 5px solid #007191;
+}
+
+.product__slider .product__card__price {
+	padding: 10px 25px;
+	font-family: Arial;
+}
+
+.product__card__price {
+	font-size: 1.3em;
+}
+
+.product__slider .product__card-btn {
+	padding: 10px 25px;	
 }
 
 .product__card__price,
@@ -908,6 +941,12 @@ footer {
 	flex-grow: 2;
 }
 
+.contacts__info p i {
+	font-size: 1.5em;
+	padding-right: 10px;
+	color: #444;
+}
+
 .map{
     overflow:hidden;
     padding-bottom:55.25%;
@@ -1064,3 +1103,156 @@ section.calculate {
 }
 }
 
+// Page product
+
+.goods {
+	padding: 3% 0%;
+}
+
+.goods__card {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.goods__card-info_basic {
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: 0px 0px 2px 0px rgba(140,140,140,0.3);
+	padding: 2em;
+	border-bottom: 3px solid #007191;
+}
+
+.goods__card-nav ul{
+	width: 100%;
+	display: flex;
+	padding: 10px 0px;
+}
+
+.goods__card-nav ul li a{
+	padding: 0px 5px;
+	padding-left: 0px;
+	font-size: 1.2em;
+	color: #000;
+}
+
+.goods__card-nav ul li i{
+	padding: 0px 10px;
+	color: #e0e0e0;
+}
+
+.goods__card-slider {
+	width: 800px;
+	display: flex;
+	min-width: 320px;
+	padding-top: 60px;
+}
+
+.goods__slider-card {
+	width: 600px;
+	min-width: 260px;
+}
+
+.goods__slider-card .slider-card img{
+	border-bottom: 5px solid #007191;
+}
+
+.goods__slider-nav {
+	width: 120px;
+	min-width: 40px;
+}
+
+.goods__slider-nav .slider-card {
+	padding: 2px;
+	padding-top: 0px;
+	outline: none;
+}
+
+.goods__slider-nav .slider-card img {
+	border-bottom: 3px solid #007191;
+}
+
+.goods__card-info {
+	min-width: 320px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.goods__price {
+	margin: 30px 0px;
+}
+
+.goods__price span {
+	font-family: $ff-r;
+	font-size: 40px;
+}
+
+.type-done {
+	padding: 10px 0px;
+	padding-top: 20px;
+}
+
+.type-done p span {
+	color: green;
+	padding: 5px 0px;
+}
+
+.articul {
+	font-size: 1em;
+}
+
+.product__pay {
+	padding: 10px 0px;
+}
+
+.product__pay p i {	
+	padding-right: 5px;
+}
+
+.product__pay p  {	
+	padding: 5px 0px;
+}
+
+.share {
+	padding: 10px 0px;
+}
+
+.share p {
+	color: #666;
+}
+
+.goods__card-description {
+	margin-top: 3%;
+	font-family: $ff-r;
+	box-shadow: 0px 0px 2px 0px rgba(140,140,140,0.3);
+	padding: 2em;
+	border-bottom: 3px solid #007191;
+	
+	h2 {
+		font-family: $ff-l;
+		font-size: 1.7em;
+		padding: 15px 0px;
+	}
+
+	p{
+		font-size: 1.3em;
+	}
+}
+
+
+.animate-out {
+	animation: out 2s ease-in-out forwards;
+}
+  
+@keyframes out {
+	0% {
+		    transform: translate(-50%, -50%);
+	}
+
+	100% {
+    transform: translate(-50%, -200%);
+		
+	}
+}
+  

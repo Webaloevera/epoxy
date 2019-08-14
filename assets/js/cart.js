@@ -31,12 +31,16 @@ function showCart() {
 			out += ' <br>';
 		}
 		$('.main-cart').html(out);
+		$('.del-goods').on('click', delhide);
 		$('.del-goods').on('click', delGoods);
 		$('.plus-goods').on('click', plusGoods);
 		$('.minus-goods').on('click', minusGoods);
 	});
 }
 }
+
+function delhide() {
+};
 
 function delGoods() {
 	var id = $(this).attr('data-id');
@@ -146,3 +150,6 @@ function sendEmail() {
 		alert('Заполните поля!');
 	}
 }
+
+
+

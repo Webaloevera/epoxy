@@ -4,7 +4,8 @@
 		"cost" : "74000",
 		"desctiproin" : "Самый галимый",
 		"order" : "1",
-		"img" : "Cart-0.jpg"
+		"img" : "Cart-0.jpg",
+		"href" : "goods/product.html"
 	},
 	"1235" : {
 		"name" : "Стол-1",

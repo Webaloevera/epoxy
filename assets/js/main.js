@@ -62,7 +62,7 @@ function goodsOut(data) {
       out +='<div class="cost">'+data[key].cost+' руб.</div>';
       out +='</div>';
       out +='<div class="product__card-btn">';
-      out +='<a class="add__card" href="">';
+      out +='<a class="add__card" href="'+data[key].href+'">';
       out +='<span>Смотреть</span>';
       out +='<i class="ion-checkmark"></i>';
       out +='</a>';
@@ -150,3 +150,61 @@ $('.about__add-btn').on('click', function(e){
     content.slideUp();
   }
 });
+
+/******************************************************
+********** Fourth script: Array returning function ****
+******************************************************/
+
+function updateSize(){
+
+//Create variables to store the geometric form dimensions entered by the user
+
+  var width = document.getElementById('width').value;
+  var height = document.getElementById('height').value;
+
+  // Creating a function to do the calculation and returning an array of the results
+
+  function getSize(width, height, depth) {
+    var area = width * 47 - height;
+    var volume = width * height;
+    var sizes = [area, volume];
+    return sizes;
+  }
+
+  //Updating the nodes text content with the returned values
+
+  var elArea = document.getElementById('area');
+  elArea.textContent = getSize(width, height)[0];
+}
+
+
+//Product 
+
+ $('.goods__slider-card').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  cssEase: 'linear',
+  asNavFor: '.goods__slider-nav',
+  draggable: false,
+  TouchMove: false,
+  touchThreshold: false
+});
+$('.goods__slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.goods__slider-card',
+  focusOnSelect: true,
+  vertical:true,
+  infinite: true,
+  useCSS: true
+});
+
+//zoom
+var $zoom;
+$(document).ready(function() {
+  $zoom = $('.zoom').magnify();
+});
+
+
