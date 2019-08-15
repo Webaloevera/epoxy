@@ -9,7 +9,7 @@ $(document).ready(function() {
         autoplaySpeed:2800,     
         slidesToShow:3,     
         slidesToScroll:1,   
-        dots:true
+        dots:false
     });
 
 $('.product__slider').slick({
@@ -59,7 +59,7 @@ function goodsOut(data) {
       out +='<h3 class="name_card">'+data[key].name+'</h3>';
       out +='<div class="product__card__price">';
       out +='<p>Цена:</p>';
-      out +='<div class="cost">'+data[key].cost+' руб.</div>';
+      out +='<div class="cost">'+data[key].cost+'$</div>';
       out +='</div>';
       out +='<div class="product__card-btn">';
       out +='<a class="add__card" href="'+data[key].href+'">';
@@ -189,7 +189,8 @@ function updateSize(){
   asNavFor: '.goods__slider-nav',
   draggable: false,
   TouchMove: false,
-  touchThreshold: false
+  touchThreshold: false,
+  dots:false
 });
 $('.goods__slider-nav').slick({
   slidesToShow: 3,
@@ -198,7 +199,8 @@ $('.goods__slider-nav').slick({
   focusOnSelect: true,
   vertical:true,
   infinite: true,
-  useCSS: true
+  useCSS: true,
+  arrows: false
 });
 
 //zoom

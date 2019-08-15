@@ -26,7 +26,7 @@ function showCart() {
 			out += ' <button data-id="'+id+'" class="minus-goods">-</button>';
 			out += ' '+cart[id]+'шт.';
 			out += ' <button data-id="'+id+'" class="plus-goods">+</button>';
-			out += 	 cart[id]*goods[id].cost+'руб.';
+			out += 	 cart[id]*goods[id].cost+'$';
 			out += ' </div>';
 			out += ' <br>';
 		}
