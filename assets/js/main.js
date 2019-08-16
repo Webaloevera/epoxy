@@ -200,7 +200,15 @@ $('.goods__slider-nav').slick({
   vertical:true,
   infinite: true,
   useCSS: true,
-  arrows: false
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 1165,
+      settings: {
+       vertical:false
+      }
+    }
+    ]
 });
 
 //zoom
