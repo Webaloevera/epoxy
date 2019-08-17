@@ -1,3 +1,39 @@
+$(document).ready(main);
+
+let hide = true;
+
+function main(){
+  $('.btn-menu').click(function(){
+    //$('nav').toggle();
+    if(hide){
+      disableScrolling();
+      $('.menu-mobil').animate({
+        right: '0%'
+      });
+      hide = false;
+      myFunction();
+    }else{
+      enableScrolling();
+      hide = true;
+      $('.menu-mobil').animate({
+        right: '-100%'
+      });
+    }
+  });
+  function disableScrolling(){
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+}
+function enableScrolling(){
+    window.onscroll=function(){};
+}
+}
+
+function myFunction(h) {
+  h.classList.toggle("open");
+}
+
 // Slider
 $(document).ready(function() {
 
@@ -216,5 +252,4 @@ var $zoom;
 $(document).ready(function() {
   $zoom = $('.zoom').magnify();
 });
-
 
