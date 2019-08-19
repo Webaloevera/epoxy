@@ -11,7 +11,7 @@ function main(){
         right: '0%'
       });
       hide = false;
-      myFunction();
+      myFunction(h);
     }else{
       enableScrolling();
       hide = true;
@@ -49,8 +49,6 @@ $(document).ready(function() {
     });
 
 $('.product__slider').slick({
-  centerMode: true,
-centerPadding: '20px',
   slidesToShow: 3,
    autoplay: true,
   autoplaySpeed: 2000,
@@ -58,9 +56,7 @@ centerPadding: '20px',
     {
       breakpoint: 768,
       settings: {
-        centerPadding: '20px',
         arrows: false,
-        centerMode: true,
         slidesToShow: 3
       }
     },
@@ -68,8 +64,6 @@ centerPadding: '20px',
       breakpoint: 480,
       settings: {
         arrows: false,
-        centerPadding: '20px',
-        centerMode: true,
         slidesToShow: 1
       }
     }

@@ -12,7 +12,7 @@ function loadCart() {
 
 function showCart() {
 	if (!isEmpty(cart)) {
-        	$('.main-cart').html('<p class="cart-empty">Корзина пуста..</p>');
+        	$('.cart__container').html('<div class="cart-empty"><img src="assets/img/emptyshopping-cart.png"><p>Корзина пуста..</p></div>');
         }
         else {
 	$.getJSON('assets/js/goods.json', function (data) {
